@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block libreria %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <form action="{% url 'cargar' %}" method="post" enctype="multipart/form-data" >{% csrf_token %}
+                {{form}}
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
